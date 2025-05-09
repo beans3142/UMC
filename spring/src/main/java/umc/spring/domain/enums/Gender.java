@@ -1,5 +1,5 @@
 package umc.spring.domain.enums;
 
 public enum Gender {
-    MALE, FEMALE, OTHER
+    MALE, FEMALE, NONE, OTHER
 }
