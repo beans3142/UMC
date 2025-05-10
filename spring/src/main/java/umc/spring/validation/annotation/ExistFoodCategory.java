@@ -5,13 +5,13 @@ import jakarta.validation.Payload;
 
 import java.lang.annotation.*;
 
-import umc.spring.validation.validator.CategoriesExistValidator;
+import umc.spring.validation.validator.ExistFoodCategoryValidator;
 
 @Documented
-@Constraint(validatedBy = CategoriesExistValidator.class)
+@Constraint(validatedBy = ExistFoodCategoryValidator.class)
 @Target( { ElementType.METHOD, ElementType.FIELD, ElementType.PARAMETER })
 @Retention(RetentionPolicy.RUNTIME)
-public @interface ExistCategories {
+public @interface ExistFoodCategory {
 
     String message() default "해당하는 카테고리가 존재하지 않습니다.";
     Class<?>[] groups() default {};

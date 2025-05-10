@@ -19,12 +19,52 @@ import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 import umc.spring.apiPayload.ApiResponse;
 import umc.spring.apiPayload.code.ErrorReasonDTO;
+import umc.spring.apiPayload.code.exception.handler.*;
 import umc.spring.apiPayload.code.status.ErrorStatus;
 
 @Slf4j
 @RestControllerAdvice(annotations = {RestController.class})
 public class ExceptionAdvice extends ResponseEntityExceptionHandler {
 
+    @ExceptionHandler(StoreHandler.class)
+    public ResponseEntity<ApiResponse<?>> handleStoreHandler(StoreHandler ex) {
+        ErrorStatus status = ex.getErrorStatus();
+        return ResponseEntity
+                .status(status.getHttpStatus())
+                .body(ApiResponse.onFailure(status.getCode(), status.getMessage(), null));
+    }
+
+    @ExceptionHandler(MissionHandler.class)
+    public ResponseEntity<ApiResponse<?>> handleMissionHandler(MissionHandler ex) {
+        ErrorStatus status = ex.getErrorStatus();
+        return ResponseEntity
+                .status(status.getHttpStatus())
+                .body(ApiResponse.onFailure(status.getCode(), status.getMessage(), null));
+    }
+
+    @ExceptionHandler(MemberMissionHandler.class)
+    public ResponseEntity<ApiResponse<?>> handleMemberMissionHandler(MemberMissionHandler ex) {
+        ErrorStatus status = ex.getErrorStatus();
+        return ResponseEntity
+                .status(status.getHttpStatus())
+                .body(ApiResponse.onFailure(status.getCode(), status.getMessage(), null));
+    }
+
+    @ExceptionHandler(ReviewHandler.class)
+    public ResponseEntity<ApiResponse<?>> handleReviewHandler(ReviewHandler ex) {
+        ErrorStatus status = ex.getErrorStatus();
+        return ResponseEntity
+                .status(status.getHttpStatus())
+                .body(ApiResponse.onFailure(status.getCode(), status.getMessage(), null));
+    }
+
+    @ExceptionHandler(FoodCategoryHandler.class)
+    public ResponseEntity<ApiResponse<?>> handleFoodCategoryHandler(FoodCategoryHandler ex) {
+        ErrorStatus status = ex.getErrorStatus();
+        return ResponseEntity
+                .status(status.getHttpStatus())
+                .body(ApiResponse.onFailure(status.getCode(), status.getMessage(), null));
+    }
 
     @ExceptionHandler
     public ResponseEntity<Object> validation(ConstraintViolationException e, WebRequest request) {

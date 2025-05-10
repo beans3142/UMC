@@ -1,4 +1,4 @@
-package umc.spring.web.dto;
+package umc.spring.web.dto.Member;
 
 import lombok.Getter;
 
@@ -6,8 +6,7 @@ import java.util.List;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-import lombok.Getter;
-import umc.spring.validation.annotation.ExistCategories;
+import umc.spring.validation.annotation.ExistFoodCategory;
 
 public class MemberRequestDTO {
 
@@ -27,7 +26,7 @@ public class MemberRequestDTO {
         String address;
         @Size(min = 5, max = 12)
         String specAddress;
-        @ExistCategories
+        @ExistFoodCategory
         List<Long> preferCategory;
     }
 }

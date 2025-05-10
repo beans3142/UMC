@@ -9,10 +9,10 @@ import umc.spring.converter.MemberPreferConverter;
 import umc.spring.domain.FoodCategory;
 import umc.spring.domain.Member;
 import umc.spring.domain.mapping.MemberPrefer;
-import umc.spring.handler.FoodCategoryHandler;
+import umc.spring.apiPayload.code.exception.handler.FoodCategoryHandler;
 import umc.spring.repository.FoodCategoryRepository.FoodCategoryRepository;
 import umc.spring.repository.MemberRepository.MemberRepository;
-import umc.spring.web.dto.MemberRequestDTO;
+import umc.spring.web.dto.Member.MemberRequestDTO;
 
 import java.util.List;
 import java.util.stream.Collectors;
