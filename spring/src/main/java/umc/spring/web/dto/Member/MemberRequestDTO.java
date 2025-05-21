@@ -11,7 +11,7 @@ import umc.spring.validation.annotation.ExistFoodCategory;
 public class MemberRequestDTO {
 
     @Getter
-    public static class JoinDto{
+    public static class CreateMemberDTO {
         @NotBlank
         String name;
         @NotNull

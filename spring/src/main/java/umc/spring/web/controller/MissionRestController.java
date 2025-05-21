@@ -7,8 +7,8 @@ import umc.spring.apiPayload.ApiResponse;
 import umc.spring.converter.MissionConverter;
 import umc.spring.domain.Mission;
 import umc.spring.service.MissionService.MissionCommandService;
-import umc.spring.web.dto.MissionRequestDTO;
-import umc.spring.web.dto.MissionResponseDTO;
+import umc.spring.web.dto.Mission.MissionRequestDTO;
+import umc.spring.web.dto.Mission.MissionResponseDTO;
 
 @RestController
 @RequiredArgsConstructor

@@ -10,7 +10,7 @@ import umc.spring.domain.Mission;
 import umc.spring.domain.Store;
 import umc.spring.repository.MissionRepository.MissionRepository;
 import umc.spring.repository.StoreRepository.StoreRepository;
-import umc.spring.web.dto.MissionRequestDTO;
+import umc.spring.web.dto.Mission.MissionRequestDTO;
 
 @Service
 @RequiredArgsConstructor

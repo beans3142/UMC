@@ -2,8 +2,8 @@ package umc.spring.converter;
 
 import umc.spring.domain.Mission;
 import umc.spring.domain.Store;
-import umc.spring.web.dto.MissionRequestDTO;
-import umc.spring.web.dto.MissionResponseDTO;
+import umc.spring.web.dto.Mission.MissionRequestDTO;
+import umc.spring.web.dto.Mission.MissionResponseDTO;
 
 public class MissionConverter {
     public static Mission toMission(MissionRequestDTO dto, Store store) {

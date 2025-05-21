@@ -1,4 +1,4 @@
-package umc.spring.web.dto;
+package umc.spring.web.dto.Mission;
 
 import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.Min;
