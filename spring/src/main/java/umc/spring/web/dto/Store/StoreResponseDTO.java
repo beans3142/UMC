@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import umc.spring.web.dto.Review.ReviewResponseDTO;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 public class StoreResponseDTO {
@@ -58,5 +59,28 @@ public class StoreResponseDTO {
         Long totalElements;
         Boolean isFirst;
         Boolean isLast;
+    }
+
+    @Builder
+    @Getter
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class MissionPreViewListDTO {
+        List<MissionPreViewDTO> missionList;
+        Integer listSize;
+        Integer totalPage;
+        Long totalElements;
+        Boolean isFirst;
+        Boolean isLast;
+    }
+
+    @Builder
+    @Getter
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class MissionPreViewDTO {
+        private Integer reward;
+        private String missionSpec;
+        private LocalDateTime deadline;
     }
 }

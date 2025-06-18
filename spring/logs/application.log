@@ -1,0 +1,854 @@
+2025-06-18 20:46:39 [main] INFO  umc.spring.Application - Starting Application using Java 17.0.9 with PID 9620 (D:\univ\spring\spring\build\classes\java\main started by ryuwangyu in D:\univ\spring\spring)
+2025-06-18 20:46:39 [main] DEBUG umc.spring.Application - Running with Spring Boot v3.3.11, Spring v6.1.19
+2025-06-18 20:46:39 [main] INFO  umc.spring.Application - No active profile set, falling back to 1 default profile: "default"
+2025-06-18 20:46:41 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-18 20:46:42 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 186 ms. Found 7 JPA repository interfaces.
+2025-06-18 20:46:42 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-18 20:46:42 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-18 20:46:42 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-18 20:46:42 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-18 20:46:42 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2965 ms
+2025-06-18 20:46:43 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-18 20:46:43 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-06-18 20:46:43 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-06-18 20:46:43 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-18 20:46:43 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-18 20:46:43 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6968bb65
+2025-06-18 20:46:43 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-18 20:46:43 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-18 20:46:43 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-06-18 20:46:45 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-18 20:46:45 [main] DEBUG org.hibernate.SQL - 
+    alter table mission 
+       modify column mission_spec TEXT not null
+2025-06-18 20:46:45 [main] DEBUG org.hibernate.SQL - 
+    alter table review 
+       modify column content TEXT not null
+2025-06-18 20:46:45 [main] DEBUG org.hibernate.SQL - 
+    alter table terms 
+       modify column body TEXT not null
+2025-06-18 20:46:45 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-18 20:46:46 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-18 20:46:46 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 14b561da-ba08-4ef8-bd64-fb7e18b48007
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-06-18 20:46:46 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-06-18 20:46:46 [main] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-06-18 20:46:47 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-18 20:46:47 [main] INFO  umc.spring.Application - Started Application in 8.382 seconds (process running for 9.891)
+2025-06-18 20:47:50 [http-nio-8080-exec-3] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-18 20:47:50 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-18 20:47:50 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-18 20:47:50 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /signup
+2025-06-18 20:47:50 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /signup
+2025-06-18 20:47:50 [http-nio-8080-exec-3] WARN  o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [111] milliseconds.
+2025-06-18 20:47:51 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 20:47:51 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2025-06-18 20:47:51 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 20:47:51 [http-nio-8080-exec-4] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to http://localhost:8080/login
+2025-06-18 20:47:51 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+2025-06-18 20:47:51 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+2025-06-18 20:47:51 [http-nio-8080-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 20:48:03 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing POST /members/signup
+2025-06-18 20:48:03 [http-nio-8080-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 20:48:03 [http-nio-8080-exec-8] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to http://localhost:8080/login
+2025-06-18 20:48:03 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+2025-06-18 20:48:03 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+2025-06-18 20:48:03 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 20:48:04 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2025-06-18 20:48:04 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 20:48:04 [http-nio-8080-exec-2] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to http://localhost:8080/login
+2025-06-18 20:48:04 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+2025-06-18 20:48:04 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+2025-06-18 20:48:04 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 20:51:42 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-18 20:51:42 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-06-18 20:51:42 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-06-18 20:51:49 [main] INFO  umc.spring.Application - Starting Application using Java 17.0.9 with PID 15148 (D:\univ\spring\spring\build\classes\java\main started by ryuwangyu in D:\univ\spring\spring)
+2025-06-18 20:51:49 [main] DEBUG umc.spring.Application - Running with Spring Boot v3.3.11, Spring v6.1.19
+2025-06-18 20:51:49 [main] INFO  umc.spring.Application - No active profile set, falling back to 1 default profile: "default"
+2025-06-18 20:51:51 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-18 20:51:51 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 170 ms. Found 7 JPA repository interfaces.
+2025-06-18 20:51:52 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-18 20:51:52 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-18 20:51:52 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-18 20:51:52 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-18 20:51:52 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3227 ms
+2025-06-18 20:51:53 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-18 20:51:53 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-06-18 20:51:53 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-06-18 20:51:53 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-18 20:51:53 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-18 20:51:53 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@43090195
+2025-06-18 20:51:53 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-18 20:51:54 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-18 20:51:54 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-06-18 20:51:55 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-18 20:51:55 [main] DEBUG org.hibernate.SQL - 
+    alter table mission 
+       modify column mission_spec TEXT not null
+2025-06-18 20:51:55 [main] DEBUG org.hibernate.SQL - 
+    alter table review 
+       modify column content TEXT not null
+2025-06-18 20:51:55 [main] DEBUG org.hibernate.SQL - 
+    alter table terms 
+       modify column body TEXT not null
+2025-06-18 20:51:55 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-18 20:51:55 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-18 20:51:56 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 9839f251-ae73-456c-837c-ae9451e5b501
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-06-18 20:51:56 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-06-18 20:51:56 [main] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-06-18 20:51:56 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-18 20:51:56 [main] INFO  umc.spring.Application - Started Application in 7.847 seconds (process running for 8.634)
+2025-06-18 20:52:18 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-18 20:52:18 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-18 20:52:18 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-18 20:52:18 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /signup
+2025-06-18 20:52:18 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /signup
+2025-06-18 20:52:18 [http-nio-8080-exec-1] WARN  o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [118] milliseconds.
+2025-06-18 20:52:19 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 20:52:19 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2025-06-18 20:52:19 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 20:52:19 [http-nio-8080-exec-2] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to http://localhost:8080/login
+2025-06-18 20:52:19 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+2025-06-18 20:52:19 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+2025-06-18 20:52:19 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 20:52:30 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing POST /members/signup
+2025-06-18 20:52:30 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 20:52:30 [http-nio-8080-exec-4] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to http://localhost:8080/login
+2025-06-18 20:52:30 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+2025-06-18 20:52:30 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+2025-06-18 20:52:30 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 20:52:30 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2025-06-18 20:52:30 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 20:52:30 [http-nio-8080-exec-6] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to http://localhost:8080/login
+2025-06-18 20:52:30 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+2025-06-18 20:52:30 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+2025-06-18 20:52:30 [http-nio-8080-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:00:27 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-18 21:00:27 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-06-18 21:00:27 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-06-18 21:00:31 [main] INFO  umc.spring.Application - Starting Application using Java 17.0.9 with PID 28264 (D:\univ\spring\spring\build\classes\java\main started by ryuwangyu in D:\univ\spring\spring)
+2025-06-18 21:00:31 [main] DEBUG umc.spring.Application - Running with Spring Boot v3.3.11, Spring v6.1.19
+2025-06-18 21:00:31 [main] INFO  umc.spring.Application - No active profile set, falling back to 1 default profile: "default"
+2025-06-18 21:00:32 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-18 21:00:32 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 105 ms. Found 7 JPA repository interfaces.
+2025-06-18 21:00:32 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-18 21:00:32 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-18 21:00:33 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-18 21:00:33 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-18 21:00:33 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2009 ms
+2025-06-18 21:00:33 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-18 21:00:33 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-06-18 21:00:33 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-06-18 21:00:33 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-18 21:00:33 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-18 21:00:34 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ff0706c
+2025-06-18 21:00:34 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-18 21:00:34 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-18 21:00:34 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-06-18 21:00:35 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-18 21:00:35 [main] DEBUG org.hibernate.SQL - 
+    alter table member_agree 
+       drop 
+       foreign key FKidc8ol6y753cph4vuq9fa9scd
+2025-06-18 21:00:35 [main] DEBUG org.hibernate.SQL - 
+    alter table member_agree 
+       drop 
+       foreign key FKg33d9g6nwdsilmn85of0tt35q
+2025-06-18 21:00:35 [main] DEBUG org.hibernate.SQL - 
+    alter table member_mission 
+       drop 
+       foreign key FKpgw7uojmq1tkna2ubpxmhlyuo
+2025-06-18 21:00:35 [main] DEBUG org.hibernate.SQL - 
+    alter table member_mission 
+       drop 
+       foreign key FKibnub11mc8k2g39v44smt9jqi
+2025-06-18 21:00:35 [main] DEBUG org.hibernate.SQL - 
+    alter table member_prefer 
+       drop 
+       foreign key FK27wbv0uj0ky73wp2oo63yd72i
+2025-06-18 21:00:35 [main] DEBUG org.hibernate.SQL - 
+    alter table member_prefer 
+       drop 
+       foreign key FKt0mtbhxwyh98gfwit7uvynexi
+2025-06-18 21:00:35 [main] DEBUG org.hibernate.SQL - 
+    alter table mission 
+       drop 
+       foreign key FKckx1b8plp95qtdk73kylhy12n
+2025-06-18 21:00:35 [main] DEBUG org.hibernate.SQL - 
+    alter table review 
+       drop 
+       foreign key FKk0ccx5i4ci2wd70vegug074w1
+2025-06-18 21:00:35 [main] DEBUG org.hibernate.SQL - 
+    alter table review 
+       drop 
+       foreign key FK74d12ba8sxxu9vpnc59b43y30
+2025-06-18 21:00:35 [main] DEBUG org.hibernate.SQL - 
+    alter table review_image 
+       drop 
+       foreign key FK16wp089tx9nm0obc217gvdd6l
+2025-06-18 21:00:35 [main] DEBUG org.hibernate.SQL - 
+    alter table store 
+       drop 
+       foreign key FKiecbc1b9m21semcf714lasyi5
+2025-06-18 21:00:35 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists food_category
+2025-06-18 21:00:35 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists member
+2025-06-18 21:00:35 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists member_agree
+2025-06-18 21:00:35 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists member_mission
+2025-06-18 21:00:35 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists member_prefer
+2025-06-18 21:00:35 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists mission
+2025-06-18 21:00:35 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists region
+2025-06-18 21:00:35 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists review
+2025-06-18 21:00:35 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists review_image
+2025-06-18 21:00:35 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists store
+2025-06-18 21:00:35 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists terms
+2025-06-18 21:00:35 [main] DEBUG org.hibernate.SQL - 
+    create table food_category (
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        updated_at datetime(6),
+        name varchar(15) not null,
+        primary key (id)
+    ) engine=InnoDB
+2025-06-18 21:00:35 [main] DEBUG org.hibernate.SQL - 
+    create table member (
+        birth_day integer not null,
+        birth_month integer not null,
+        birth_year integer not null,
+        inactive_date date,
+        point integer default 0,
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        updated_at datetime(6),
+        name varchar(20) not null,
+        address varchar(40) not null,
+        spec_address varchar(40) not null,
+        email varchar(255) not null,
+        password varchar(255) not null,
+        gender VARCHAR(10),
+        role enum ('ADMIN','USER'),
+        social_type enum ('GOOGLE','KAKAO','NAVER','NORMAL'),
+        status VARCHAR(15) DEFAULT 'ACTIVE',
+        primary key (id)
+    ) engine=InnoDB
+2025-06-18 21:00:35 [main] DEBUG org.hibernate.SQL - 
+    create table member_agree (
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        member_id bigint not null,
+        terms_id bigint not null,
+        updated_at datetime(6),
+        primary key (id)
+    ) engine=InnoDB
+2025-06-18 21:00:36 [main] DEBUG org.hibernate.SQL - 
+    create table member_mission (
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        member_id bigint not null,
+        mission_id bigint not null,
+        updated_at datetime(6),
+        status VARCHAR(15) not null,
+        primary key (id)
+    ) engine=InnoDB
+2025-06-18 21:00:36 [main] DEBUG org.hibernate.SQL - 
+    create table member_prefer (
+        category_id bigint not null,
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        member_id bigint not null,
+        updated_at datetime(6),
+        primary key (id)
+    ) engine=InnoDB
+2025-06-18 21:00:36 [main] DEBUG org.hibernate.SQL - 
+    create table mission (
+        reward integer not null,
+        created_at datetime(6),
+        deadline datetime(6) not null,
+        id bigint not null auto_increment,
+        store_id bigint not null,
+        updated_at datetime(6),
+        mission_spec TEXT not null,
+        primary key (id)
+    ) engine=InnoDB
+2025-06-18 21:00:36 [main] DEBUG org.hibernate.SQL - 
+    create table region (
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        updated_at datetime(6),
+        name varchar(20) not null,
+        primary key (id)
+    ) engine=InnoDB
+2025-06-18 21:00:36 [main] DEBUG org.hibernate.SQL - 
+    create table review (
+        score float(23),
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        member_id bigint not null,
+        store_id bigint not null,
+        updated_at datetime(6),
+        content TEXT not null,
+        primary key (id)
+    ) engine=InnoDB
+2025-06-18 21:00:36 [main] DEBUG org.hibernate.SQL - 
+    create table review_image (
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        review_id bigint not null,
+        updated_at datetime(6),
+        image_url varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+2025-06-18 21:00:36 [main] DEBUG org.hibernate.SQL - 
+    create table store (
+        score float(23),
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        region_id bigint not null,
+        updated_at datetime(6),
+        address varchar(50) not null,
+        name varchar(50) not null,
+        primary key (id)
+    ) engine=InnoDB
+2025-06-18 21:00:36 [main] DEBUG org.hibernate.SQL - 
+    create table terms (
+        optional bit not null,
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        updated_at datetime(6),
+        title varchar(20) not null,
+        body TEXT not null,
+        primary key (id)
+    ) engine=InnoDB
+2025-06-18 21:00:36 [main] DEBUG org.hibernate.SQL - 
+    alter table member 
+       add constraint UKmbmcqelty0fbrvxp1q58dn57t unique (email)
+2025-06-18 21:00:36 [main] DEBUG org.hibernate.SQL - 
+    alter table member_agree 
+       add constraint FKidc8ol6y753cph4vuq9fa9scd 
+       foreign key (member_id) 
+       references member (id)
+2025-06-18 21:00:36 [main] DEBUG org.hibernate.SQL - 
+    alter table member_agree 
+       add constraint FKg33d9g6nwdsilmn85of0tt35q 
+       foreign key (terms_id) 
+       references terms (id)
+2025-06-18 21:00:36 [main] DEBUG org.hibernate.SQL - 
+    alter table member_mission 
+       add constraint FKpgw7uojmq1tkna2ubpxmhlyuo 
+       foreign key (member_id) 
+       references member (id)
+2025-06-18 21:00:36 [main] DEBUG org.hibernate.SQL - 
+    alter table member_mission 
+       add constraint FKibnub11mc8k2g39v44smt9jqi 
+       foreign key (mission_id) 
+       references mission (id)
+2025-06-18 21:00:36 [main] DEBUG org.hibernate.SQL - 
+    alter table member_prefer 
+       add constraint FK27wbv0uj0ky73wp2oo63yd72i 
+       foreign key (category_id) 
+       references food_category (id)
+2025-06-18 21:00:36 [main] DEBUG org.hibernate.SQL - 
+    alter table member_prefer 
+       add constraint FKt0mtbhxwyh98gfwit7uvynexi 
+       foreign key (member_id) 
+       references member (id)
+2025-06-18 21:00:36 [main] DEBUG org.hibernate.SQL - 
+    alter table mission 
+       add constraint FKckx1b8plp95qtdk73kylhy12n 
+       foreign key (store_id) 
+       references store (id)
+2025-06-18 21:00:36 [main] DEBUG org.hibernate.SQL - 
+    alter table review 
+       add constraint FKk0ccx5i4ci2wd70vegug074w1 
+       foreign key (member_id) 
+       references member (id)
+2025-06-18 21:00:36 [main] DEBUG org.hibernate.SQL - 
+    alter table review 
+       add constraint FK74d12ba8sxxu9vpnc59b43y30 
+       foreign key (store_id) 
+       references store (id)
+2025-06-18 21:00:36 [main] DEBUG org.hibernate.SQL - 
+    alter table review_image 
+       add constraint FK16wp089tx9nm0obc217gvdd6l 
+       foreign key (review_id) 
+       references review (id)
+2025-06-18 21:00:36 [main] DEBUG org.hibernate.SQL - 
+    alter table store 
+       add constraint FKiecbc1b9m21semcf714lasyi5 
+       foreign key (region_id) 
+       references region (id)
+2025-06-18 21:00:37 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-18 21:00:37 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-18 21:00:37 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: a6850209-665e-4f32-bb7e-2652d28ecd13
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-06-18 21:00:37 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-06-18 21:00:37 [main] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-06-18 21:00:38 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-18 21:00:38 [main] INFO  umc.spring.Application - Started Application in 7.913 seconds (process running for 8.707)
+2025-06-18 21:01:09 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-18 21:01:09 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-18 21:01:09 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-18 21:01:09 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+2025-06-18 21:01:09 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+2025-06-18 21:01:10 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:01:10 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2025-06-18 21:01:10 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:01:10 [http-nio-8080-exec-2] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to http://localhost:8080/login
+2025-06-18 21:01:10 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+2025-06-18 21:01:10 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+2025-06-18 21:01:10 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:01:11 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /signup
+2025-06-18 21:01:11 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /signup
+2025-06-18 21:01:11 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:01:11 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2025-06-18 21:01:11 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:01:11 [http-nio-8080-exec-5] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to http://localhost:8080/login
+2025-06-18 21:01:11 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+2025-06-18 21:01:11 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+2025-06-18 21:01:11 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:01:29 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing POST /members/signup
+2025-06-18 21:01:29 [http-nio-8080-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:01:29 [http-nio-8080-exec-7] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to http://localhost:8080/login
+2025-06-18 21:01:29 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+2025-06-18 21:01:29 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+2025-06-18 21:01:29 [http-nio-8080-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:01:29 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2025-06-18 21:01:29 [http-nio-8080-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:01:29 [http-nio-8080-exec-9] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to http://localhost:8080/login
+2025-06-18 21:01:29 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+2025-06-18 21:01:29 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+2025-06-18 21:01:29 [http-nio-8080-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:03:18 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-18 21:03:18 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-06-18 21:03:18 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-06-18 21:03:23 [main] INFO  umc.spring.Application - Starting Application using Java 17.0.9 with PID 27248 (D:\univ\spring\spring\build\classes\java\main started by ryuwangyu in D:\univ\spring\spring)
+2025-06-18 21:03:23 [main] DEBUG umc.spring.Application - Running with Spring Boot v3.3.11, Spring v6.1.19
+2025-06-18 21:03:23 [main] INFO  umc.spring.Application - No active profile set, falling back to 1 default profile: "default"
+2025-06-18 21:03:25 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-18 21:03:25 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 171 ms. Found 7 JPA repository interfaces.
+2025-06-18 21:03:26 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-18 21:03:26 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-18 21:03:26 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-18 21:03:26 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-18 21:03:26 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2172 ms
+2025-06-18 21:03:26 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-18 21:03:26 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-06-18 21:03:26 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-06-18 21:03:26 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-18 21:03:26 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-18 21:03:27 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3d8bd881
+2025-06-18 21:03:27 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-18 21:03:27 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-18 21:03:27 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-06-18 21:03:28 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-18 21:03:28 [main] DEBUG org.hibernate.SQL - 
+    alter table mission 
+       modify column mission_spec TEXT not null
+2025-06-18 21:03:29 [main] DEBUG org.hibernate.SQL - 
+    alter table review 
+       modify column content TEXT not null
+2025-06-18 21:03:29 [main] DEBUG org.hibernate.SQL - 
+    alter table terms 
+       modify column body TEXT not null
+2025-06-18 21:03:29 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-18 21:03:29 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-18 21:03:29 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: f382ce11-5db1-421b-935c-cf79d1bb122d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-06-18 21:03:29 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-06-18 21:03:30 [main] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-06-18 21:03:30 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-18 21:03:30 [main] INFO  umc.spring.Application - Started Application in 7.317 seconds (process running for 8.116)
+2025-06-18 21:03:33 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-18 21:03:33 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-18 21:03:33 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-06-18 21:03:33 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+2025-06-18 21:03:33 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+2025-06-18 21:03:34 [http-nio-8080-exec-1] WARN  o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [110] milliseconds.
+2025-06-18 21:03:34 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:03:34 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2025-06-18 21:03:34 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:03:34 [http-nio-8080-exec-2] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to http://localhost:8080/login
+2025-06-18 21:03:34 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+2025-06-18 21:03:34 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+2025-06-18 21:03:34 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:03:35 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /signup
+2025-06-18 21:03:35 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /signup
+2025-06-18 21:03:35 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:03:35 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2025-06-18 21:03:35 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:03:35 [http-nio-8080-exec-5] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to http://localhost:8080/login
+2025-06-18 21:03:35 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+2025-06-18 21:03:35 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+2025-06-18 21:03:35 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:03:41 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing POST /members/signup
+2025-06-18 21:03:41 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured POST /members/signup
+2025-06-18 21:03:41 [http-nio-8080-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:03:41 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2025-06-18 21:03:41 [http-nio-8080-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:03:41 [http-nio-8080-exec-8] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to http://localhost:8080/login
+2025-06-18 21:03:41 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+2025-06-18 21:03:41 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+2025-06-18 21:03:41 [http-nio-8080-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:04:26 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing POST /members/signup
+2025-06-18 21:04:26 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured POST /members/signup
+2025-06-18 21:04:26 [http-nio-8080-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:04:26 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2025-06-18 21:04:26 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:04:26 [http-nio-8080-exec-1] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to http://localhost:8080/login
+2025-06-18 21:04:26 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+2025-06-18 21:04:26 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+2025-06-18 21:04:26 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:05:26 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing POST /members/signup
+2025-06-18 21:05:26 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured POST /members/signup
+2025-06-18 21:05:26 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:05:26 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2025-06-18 21:05:26 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:05:26 [http-nio-8080-exec-5] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to http://localhost:8080/login
+2025-06-18 21:05:26 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+2025-06-18 21:05:26 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+2025-06-18 21:05:26 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:08:59 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-18 21:08:59 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-06-18 21:08:59 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-06-18 21:09:05 [main] INFO  umc.spring.Application - Starting Application using Java 17.0.9 with PID 27796 (D:\univ\spring\spring\build\classes\java\main started by ryuwangyu in D:\univ\spring\spring)
+2025-06-18 21:09:05 [main] DEBUG umc.spring.Application - Running with Spring Boot v3.3.11, Spring v6.1.19
+2025-06-18 21:09:05 [main] INFO  umc.spring.Application - No active profile set, falling back to 1 default profile: "default"
+2025-06-18 21:09:07 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-18 21:09:07 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 139 ms. Found 7 JPA repository interfaces.
+2025-06-18 21:09:07 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-18 21:09:07 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-18 21:09:07 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-18 21:09:08 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-18 21:09:08 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2165 ms
+2025-06-18 21:09:08 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-18 21:09:08 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-06-18 21:09:08 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-06-18 21:09:08 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-18 21:09:08 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-18 21:09:09 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@69d021c1
+2025-06-18 21:09:09 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-18 21:09:09 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-18 21:09:09 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-06-18 21:09:10 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-18 21:09:10 [main] DEBUG org.hibernate.SQL - 
+    alter table mission 
+       modify column mission_spec TEXT not null
+2025-06-18 21:09:10 [main] DEBUG org.hibernate.SQL - 
+    alter table review 
+       modify column content TEXT not null
+2025-06-18 21:09:10 [main] DEBUG org.hibernate.SQL - 
+    alter table terms 
+       modify column body TEXT not null
+2025-06-18 21:09:10 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-18 21:09:11 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-18 21:09:11 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 54a8bc9f-944c-4c44-a9e0-8f8fcce7bc79
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-06-18 21:09:11 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-06-18 21:09:11 [main] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-06-18 21:09:11 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-18 21:09:11 [main] INFO  umc.spring.Application - Started Application in 6.622 seconds (process running for 7.506)
+2025-06-18 21:13:20 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-18 21:13:20 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-18 21:13:20 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-18 21:13:20 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing POST /members/signup
+2025-06-18 21:13:20 [http-nio-8080-exec-1] DEBUG o.s.security.web.csrf.CsrfFilter - Invalid CSRF token found for http://localhost:8080/members/signup
+2025-06-18 21:13:20 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AccessDeniedHandlerImpl - Responding with 403 status code
+2025-06-18 21:13:20 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing POST /error
+2025-06-18 21:13:20 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:13:20 [http-nio-8080-exec-1] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to http://localhost:8080/login
+2025-06-18 21:13:20 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+2025-06-18 21:13:20 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+2025-06-18 21:13:21 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:13:21 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2025-06-18 21:13:21 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:13:21 [http-nio-8080-exec-3] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to http://localhost:8080/login
+2025-06-18 21:13:21 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+2025-06-18 21:13:21 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+2025-06-18 21:13:21 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:15:43 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+2025-06-18 21:15:43 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+2025-06-18 21:15:43 [http-nio-8080-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:15:43 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2025-06-18 21:15:43 [http-nio-8080-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:15:43 [http-nio-8080-exec-8] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to http://localhost:8080/login
+2025-06-18 21:15:43 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+2025-06-18 21:15:43 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+2025-06-18 21:15:43 [http-nio-8080-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:15:43 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+2025-06-18 21:15:43 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+2025-06-18 21:15:43 [http-nio-8080-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:15:43 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2025-06-18 21:15:43 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:15:43 [http-nio-8080-exec-1] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to http://localhost:8080/login
+2025-06-18 21:15:43 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+2025-06-18 21:15:43 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+2025-06-18 21:15:43 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:15:44 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+2025-06-18 21:15:44 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+2025-06-18 21:15:44 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:15:44 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2025-06-18 21:15:44 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:15:44 [http-nio-8080-exec-4] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to http://localhost:8080/login
+2025-06-18 21:15:44 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+2025-06-18 21:15:44 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+2025-06-18 21:15:44 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:15:44 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+2025-06-18 21:15:44 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+2025-06-18 21:15:44 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:15:44 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2025-06-18 21:15:44 [http-nio-8080-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:15:44 [http-nio-8080-exec-7] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to http://localhost:8080/login
+2025-06-18 21:15:44 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+2025-06-18 21:15:44 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+2025-06-18 21:15:44 [http-nio-8080-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:15:45 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /signup
+2025-06-18 21:15:45 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /signup
+2025-06-18 21:15:45 [http-nio-8080-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:15:45 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2025-06-18 21:15:45 [http-nio-8080-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:15:45 [http-nio-8080-exec-10] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to http://localhost:8080/login
+2025-06-18 21:15:45 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+2025-06-18 21:15:45 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+2025-06-18 21:15:45 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:15:53 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing POST /members/signup
+2025-06-18 21:15:53 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured POST /members/signup
+2025-06-18 21:15:53 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        fc1_0.id,
+        fc1_0.created_at,
+        fc1_0.name,
+        fc1_0.updated_at 
+    from
+        food_category fc1_0 
+    where
+        fc1_0.id=?
+2025-06-18 21:15:53 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        fc1_0.id,
+        fc1_0.created_at,
+        fc1_0.name,
+        fc1_0.updated_at 
+    from
+        food_category fc1_0 
+    where
+        fc1_0.id=?
+2025-06-18 21:15:53 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    /* insert for
+        umc.spring.domain.Member */insert 
+    into
+        member (address, birth_day, birth_month, birth_year, created_at, email, gender, name, password, role, spec_address, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-06-18 21:15:53 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    /* insert for
+        umc.spring.domain.mapping.MemberPrefer */insert 
+    into
+        member_prefer (created_at, category_id, member_id, updated_at) 
+    values
+        (?, ?, ?, ?)
+2025-06-18 21:15:53 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    /* insert for
+        umc.spring.domain.mapping.MemberPrefer */insert 
+    into
+        member_prefer (created_at, category_id, member_id, updated_at) 
+    values
+        (?, ?, ?, ?)
+2025-06-18 21:15:53 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:15:53 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+2025-06-18 21:15:53 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+2025-06-18 21:15:53 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:15:53 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2025-06-18 21:15:53 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:15:53 [http-nio-8080-exec-4] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to http://localhost:8080/login
+2025-06-18 21:15:53 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+2025-06-18 21:15:53 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+2025-06-18 21:15:53 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:20:09 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-18 21:20:09 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-06-18 21:20:09 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-06-18 21:20:15 [main] INFO  umc.spring.Application - Starting Application using Java 17.0.9 with PID 14660 (D:\univ\spring\spring\build\classes\java\main started by ryuwangyu in D:\univ\spring\spring)
+2025-06-18 21:20:15 [main] DEBUG umc.spring.Application - Running with Spring Boot v3.3.11, Spring v6.1.19
+2025-06-18 21:20:15 [main] INFO  umc.spring.Application - No active profile set, falling back to 1 default profile: "default"
+2025-06-18 21:20:17 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-18 21:20:17 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 137 ms. Found 7 JPA repository interfaces.
+2025-06-18 21:20:17 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-18 21:20:17 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-18 21:20:17 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-18 21:20:18 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-18 21:20:18 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2324 ms
+2025-06-18 21:20:18 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-18 21:20:18 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-06-18 21:20:18 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-06-18 21:20:18 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-18 21:20:18 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-18 21:20:19 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ff0706c
+2025-06-18 21:20:19 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-18 21:20:19 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-18 21:20:19 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-06-18 21:20:20 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-18 21:20:20 [main] DEBUG org.hibernate.SQL - 
+    alter table mission 
+       modify column mission_spec TEXT not null
+2025-06-18 21:20:20 [main] DEBUG org.hibernate.SQL - 
+    alter table review 
+       modify column content TEXT not null
+2025-06-18 21:20:20 [main] DEBUG org.hibernate.SQL - 
+    alter table terms 
+       modify column body TEXT not null
+2025-06-18 21:20:20 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-18 21:20:21 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-18 21:20:21 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-06-18 21:20:21 [main] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-06-18 21:20:21 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-18 21:20:21 [main] INFO  umc.spring.Application - Started Application in 6.853 seconds (process running for 7.67)
+2025-06-18 21:20:40 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-18 21:20:40 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-18 21:20:40 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-18 21:20:40 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /signup
+2025-06-18 21:20:40 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /signup
+2025-06-18 21:20:41 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:20:41 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2025-06-18 21:20:41 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:20:41 [http-nio-8080-exec-2] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to http://localhost:8080/login
+2025-06-18 21:20:41 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+2025-06-18 21:20:41 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+2025-06-18 21:20:41 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:21:09 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing POST /members/signup
+2025-06-18 21:21:09 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured POST /members/signup
+2025-06-18 21:21:10 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        fc1_0.id,
+        fc1_0.created_at,
+        fc1_0.name,
+        fc1_0.updated_at 
+    from
+        food_category fc1_0 
+    where
+        fc1_0.id=?
+2025-06-18 21:21:10 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        fc1_0.id,
+        fc1_0.created_at,
+        fc1_0.name,
+        fc1_0.updated_at 
+    from
+        food_category fc1_0 
+    where
+        fc1_0.id=?
+2025-06-18 21:21:10 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    /* insert for
+        umc.spring.domain.Member */insert 
+    into
+        member (address, birth_day, birth_month, birth_year, created_at, email, gender, name, password, role, spec_address, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-06-18 21:21:10 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    /* insert for
+        umc.spring.domain.mapping.MemberPrefer */insert 
+    into
+        member_prefer (created_at, category_id, member_id, updated_at) 
+    values
+        (?, ?, ?, ?)
+2025-06-18 21:21:10 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    /* insert for
+        umc.spring.domain.mapping.MemberPrefer */insert 
+    into
+        member_prefer (created_at, category_id, member_id, updated_at) 
+    values
+        (?, ?, ?, ?)
+2025-06-18 21:21:10 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:21:10 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+2025-06-18 21:21:10 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+2025-06-18 21:21:10 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:21:10 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2025-06-18 21:21:10 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:21:10 [http-nio-8080-exec-6] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to http://localhost:8080/login
+2025-06-18 21:21:10 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+2025-06-18 21:21:10 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+2025-06-18 21:21:10 [http-nio-8080-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-06-18 21:21:16 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing POST /login
+2025-06-18 21:21:16 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        m1_0.id,
+        m1_0.address,
+        m1_0.birth_day,
+        m1_0.birth_month,
+        m1_0.birth_year,
+        m1_0.created_at,
+        m1_0.email,
+        m1_0.gender,
+        m1_0.inactive_date,
+        m1_0.name,
+        m1_0.password,
+        m1_0.point,
+        m1_0.role,
+        m1_0.social_type,
+        m1_0.spec_address,
+        m1_0.status,
+        m1_0.updated_at 
+    from
+        member m1_0 
+    where
+        m1_0.email=?
+2025-06-18 21:21:17 [http-nio-8080-exec-8] DEBUG o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2025-06-18 21:21:17 [http-nio-8080-exec-8] DEBUG o.s.s.w.a.s.ChangeSessionIdAuthenticationStrategy - Changed session id from FDF262497D9D12751D5739E0C8E471BC
+2025-06-18 21:21:17 [http-nio-8080-exec-8] DEBUG o.s.s.w.c.CsrfAuthenticationStrategy - Replaced CSRF Token
+2025-06-18 21:21:17 [http-nio-8080-exec-8] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=a@a.a, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=FDF262497D9D12751D5739E0C8E471BC], Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@60ffd466]
+2025-06-18 21:21:17 [http-nio-8080-exec-8] DEBUG o.s.s.w.a.UsernamePasswordAuthenticationFilter - Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=a@a.a, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=FDF262497D9D12751D5739E0C8E471BC], Granted Authorities=[ROLE_ADMIN]]
+2025-06-18 21:21:17 [http-nio-8080-exec-8] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to /home
+2025-06-18 21:21:17 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /home
+2025-06-18 21:21:17 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /home
+2025-06-18 21:21:17 [http-nio-8080-exec-9] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=a@a.a, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=FDF262497D9D12751D5739E0C8E471BC], Granted Authorities=[ROLE_ADMIN]]]
+2025-06-18 21:21:17 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2025-06-18 21:21:17 [http-nio-8080-exec-10] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=a@a.a, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=FDF262497D9D12751D5739E0C8E471BC], Granted Authorities=[ROLE_ADMIN]]]
+2025-06-18 21:21:17 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /favicon.ico
+2025-06-18 21:21:17 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
+2025-06-18 21:21:17 [http-nio-8080-exec-10] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=a@a.a, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=FDF262497D9D12751D5739E0C8E471BC], Granted Authorities=[ROLE_ADMIN]]]
+2025-06-18 21:21:17 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /error
+2025-06-18 21:21:37 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /admin
+2025-06-18 21:21:37 [http-nio-8080-exec-1] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=a@a.a, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=FDF262497D9D12751D5739E0C8E471BC], Granted Authorities=[ROLE_ADMIN]]]
+2025-06-18 21:21:37 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /admin
+2025-06-18 21:21:37 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
+2025-06-18 21:21:37 [http-nio-8080-exec-1] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=a@a.a, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=FDF262497D9D12751D5739E0C8E471BC], Granted Authorities=[ROLE_ADMIN]]]
+2025-06-18 21:21:37 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /error
+2025-06-18 21:21:40 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /home
+2025-06-18 21:21:40 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /home
+2025-06-18 21:21:40 [http-nio-8080-exec-2] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=a@a.a, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=FDF262497D9D12751D5739E0C8E471BC], Granted Authorities=[ROLE_ADMIN]]]
+2025-06-18 21:21:42 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /admin
+2025-06-18 21:21:42 [http-nio-8080-exec-4] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=a@a.a, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=FDF262497D9D12751D5739E0C8E471BC], Granted Authorities=[ROLE_ADMIN]]]
+2025-06-18 21:21:42 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /admin
+2025-06-18 21:21:42 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
+2025-06-18 21:21:42 [http-nio-8080-exec-4] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=a@a.a, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=FDF262497D9D12751D5739E0C8E471BC], Granted Authorities=[ROLE_ADMIN]]]
+2025-06-18 21:21:42 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /error

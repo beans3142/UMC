@@ -1,12 +1,12 @@
 package umc.spring.converter;
 
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+
 import umc.spring.domain.Member;
 import umc.spring.domain.enums.Gender;
 import umc.spring.web.dto.Member.MemberRequestDTO;
 import umc.spring.web.dto.Member.MemberResponseDTO;
-
-import java.time.LocalDateTime;
-import java.util.ArrayList;
 
 public class MemberConverter {
 
@@ -34,10 +34,16 @@ public class MemberConverter {
         }
 
         return Member.builder()
+                .name(request.getName())
+                .email(request.getEmail())
+                .password(request.getPassword())
+                .gender(gender)
+                .birthYear(request.getBirthYear())
+                .birthMonth(request.getBirthMonth())
+                .birthDay(request.getBirthDay())
                 .address(request.getAddress())
                 .specAddress(request.getSpecAddress())
-                .gender(gender)
-                .name(request.getName())
+                .role(request.getRole())
                 .memberPreferList(new ArrayList<>())
                 .build();
     }
